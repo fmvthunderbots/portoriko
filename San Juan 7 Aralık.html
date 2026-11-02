@@ -1,0 +1,1044 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>San Juan 7 Aralık</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a fixed canvas scene of golden-hour Old San Juan sits behind one column of brushed-steel glass plates; the timeline hangs on a chrome rail. */
+:root{
+  --night:#06141c;
+  --ink:#e6edf1;
+  --ink-2:#c3d0d7;
+  --steel:#d3dce2;
+  --steel-2:#9fb0ba;
+  --glass:rgba(8,26,36,.72);
+  --edge:rgba(255,255,255,.18);
+  --amber:#ffbf5e;
+  --coral:#ff7a59;
+  --teal:#43d1c1;
+  --f-display:'Unbounded','Arial Black',system-ui,sans-serif;
+  --f-body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{background:var(--night);color:var(--ink);font:400 16px/1.62 var(--f-body)}
+a{color:var(--teal);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+
+/* scene */
+.stage{position:fixed;inset:0;z-index:0;overflow:hidden;background:linear-gradient(180deg,#06212c,#0b3a4a 50%,#04141c)}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.stage .brush{position:absolute;inset:0;background:
+  repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 1px,rgba(0,0,0,.035) 1px 3px),
+  repeating-linear-gradient(0deg,rgba(255,255,255,.014) 0 1px,transparent 1px 6px)}
+.stage .sheen{position:absolute;inset:0;background:
+  linear-gradient(112deg,rgba(255,255,255,0) 26%,rgba(255,255,255,.09) 40%,rgba(255,255,255,0) 55%,rgba(255,255,255,.05) 72%,rgba(255,255,255,0) 86%),
+  radial-gradient(120% 90% at 50% 40%,rgba(0,0,0,0) 55%,rgba(2,10,16,.55) 100%),
+  linear-gradient(180deg,rgba(4,16,24,.28),rgba(4,16,24,.38))}
+
+/* page */
+.page{position:relative;z-index:1;max-width:1080px;margin:0 auto;
+  padding-block:clamp(16px,4vw,48px) 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:grid;gap:clamp(14px,2.2vw,22px)}
+.page>*{min-width:0}
+
+.glass{position:relative;border-radius:12px;padding:clamp(18px,3.2vw,36px);
+  background:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.022) 0 1px,rgba(0,0,0,.02) 1px 3px),
+    linear-gradient(135deg,rgba(255,255,255,.16),rgba(255,255,255,.035) 38%,rgba(255,255,255,.10) 62%,rgba(255,255,255,.02)),
+    var(--glass);
+  -webkit-backdrop-filter:blur(18px) saturate(1.25);
+  backdrop-filter:blur(18px) saturate(1.25);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 0 0 1px var(--edge),0 26px 60px -22px rgba(0,0,0,.6)}
+
+.chrome{background:linear-gradient(180deg,#ffffff 6%,#dbe5ea 30%,#9db0bb 52%,#f1f5f7 62%,#b2c2cb 84%,#f6f9fa 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+@supports not ((-webkit-background-clip:text) or (background-clip:text)){.chrome{color:var(--ink);-webkit-text-fill-color:currentColor}}
+
+.eyebrow{font:500 12px/1.4 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin:0 0 14px}
+h1,h2,h3{margin:0}
+h1{font:700 clamp(2.3rem,8.6vw,5.6rem)/1.04 var(--f-display);letter-spacing:-.02em;text-wrap:balance}
+h1 .ln{display:block;padding-bottom:.06em}
+h2{font:500 clamp(1.35rem,3.4vw,2rem)/1.18 var(--f-display);letter-spacing:-.01em;text-wrap:balance;margin-bottom:8px}
+h3{font:600 19px/1.3 var(--f-body)}
+p{margin:0;text-wrap:pretty}
+.lede{color:var(--ink-2);max-width:64ch;margin-bottom:22px}
+
+/* hero */
+.hero{overflow:hidden}
+.hero .lede{font-size:clamp(1rem,1.9vw,1.2rem);margin:20px 0 22px;max-width:58ch}
+.hero::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(105deg,transparent 36%,rgba(255,255,255,.2) 50%,transparent 64%);
+  transform:translateX(-130%);animation:sweep 2.4s .5s ease-out forwards}
+@keyframes sweep{to{transform:translateX(130%)}}
+@media (prefers-reduced-motion:reduce){.hero::after{animation:none}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+.chips li,.meta li,.meta span{font:500 12px/1.3 var(--f-mono);letter-spacing:.03em;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.09);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);color:var(--steel)}
+.hotel{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding-top:18px;border-top:1px solid rgba(255,255,255,.14)}
+.hotel p{flex:1 1 280px;color:var(--ink-2);font-size:15px}
+.hotel strong{display:block;color:var(--ink);font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:14px 22px;margin:20px 0 0;padding:18px 0 0;border-top:1px solid rgba(255,255,255,.14)}
+.facts div{min-width:0}
+.facts dt{font:500 11px/1.4 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--steel-2)}
+.facts dd{margin:4px 0 0;font:500 1.15rem/1.3 var(--f-display);color:var(--ink)}
+.facts dd small{display:block;margin-top:3px;font:400 12.5px/1.4 var(--f-body);color:var(--steel-2)}
+
+/* day strip */
+.strip{display:flex;height:34px;gap:3px;padding:3px;border-radius:6px;background:rgba(0,0,0,.3);box-shadow:inset 0 1px 3px rgba(0,0,0,.5),0 1px 0 rgba(255,255,255,.12)}
+.seg{display:block;min-width:0;border-radius:3px;background:var(--c);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -6px 8px rgba(0,0,0,.18)}
+.seg.tr{--c:linear-gradient(180deg,#e8eef2,#8fa1ac)}
+.seg.fort{--c:linear-gradient(180deg,#ffd593,#d99a2f)}
+.seg.walk{--c:linear-gradient(180deg,#ffa488,#d9573a)}
+.seg.sea{--c:linear-gradient(180deg,#8ff0e3,#1f9e93)}
+.ticks{position:relative;height:22px;margin-top:6px;font:500 12px/1 var(--f-mono);color:var(--steel-2)}
+.ticks span{position:absolute;top:2px;transform:translateX(-50%)}
+.ticks span:first-child{transform:none}
+.ticks span:last-child{transform:translateX(-100%)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 20px;margin:8px 0 26px;padding:0;list-style:none;font-size:13.5px;color:var(--ink-2)}
+.legend li{display:flex;align-items:center;gap:8px}
+.legend i{width:14px;height:10px;border-radius:2px;background:var(--c);display:block;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+
+/* timeline */
+.timeline{position:relative;display:grid;gap:14px;padding-left:36px}
+.timeline::before{content:"";position:absolute;left:11px;top:4px;bottom:4px;width:3px;border-radius:2px;
+  background:linear-gradient(180deg,#f3f7f9,#8fa0ab 22%,#e2e9ed 46%,#7d909b 70%,#dfe7eb);opacity:.85}
+.era{display:flex;align-items:center;gap:14px;margin:8px 0 0;font:500 12px/1.3 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.era:first-child{margin-top:0}
+.era::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(255,255,255,.35),transparent)}
+.stop{position:relative;border-radius:10px;padding:16px 18px;
+  background:linear-gradient(135deg,rgba(255,255,255,.11),rgba(255,255,255,.03) 45%,rgba(255,255,255,.075));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.24),inset 0 0 0 1px rgba(255,255,255,.1)}
+.stop::before{content:"";position:absolute;left:-32px;top:20px;width:16px;height:16px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff,#bac8d0 45%,#5a6d78);box-shadow:0 0 0 3px rgba(6,20,28,.85)}
+.stop.opt::before{background:radial-gradient(circle at 35% 30%,#ffe0d6,#ff9d85 50%,#a8442c)}
+.tl-tools{display:flex;justify-content:flex-end;margin:0 0 14px}
+.ghost{font:600 12px/1 var(--f-mono);letter-spacing:.08em;color:var(--steel);background:rgba(255,255,255,.07);border:0;border-radius:4px;padding:12px 14px;min-height:44px;cursor:pointer;box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
+.ghost:hover{background:rgba(255,255,255,.13)}
+details.stop{padding:0}
+details.stop summary{display:block;list-style:none;cursor:pointer;padding:16px 18px;border-radius:10px;-webkit-tap-highlight-color:transparent}
+details.stop summary::-webkit-details-marker{display:none}
+details.stop summary:focus-visible{outline:2px solid var(--amber);outline-offset:-2px}
+details.stop .body{padding:0 18px 16px}
+details.stop .meta{margin-top:10px}
+.top{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
+.top h3{flex:1 1 auto;min-width:0}
+.chev{margin-left:auto;align-self:center;flex:none;width:10px;height:10px;border-right:2px solid var(--steel-2);border-bottom:2px solid var(--steel-2);transform:rotate(45deg);transition:transform .2s}
+details[open].stop .chev{transform:rotate(-135deg)}
+.tag.now{color:var(--night);background:var(--amber);box-shadow:none;font-weight:600}
+.stop.now{box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 0 0 0 1.5px var(--amber),0 0 26px -6px rgba(255,191,94,.55)}
+.stop.now::before{box-shadow:0 0 0 3px rgba(6,20,28,.85),0 0 14px 2px rgba(255,191,94,.8)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+section{scroll-margin-top:12px}
+.dock{display:none}
+.t{font:500 13px/1.2 var(--f-mono);letter-spacing:.12em;color:var(--amber)}
+.tag{font:500 11px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--coral);padding:4px 8px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(255,122,89,.6)}
+.stop p{color:var(--ink-2);font-size:15.5px}
+.stop p+p{margin-top:8px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 0;padding:0;list-style:none}
+
+/* routes, addresses */
+.route{margin:0 0 6px;padding:0;list-style:none;display:grid;gap:0}
+.route li{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 18px;padding:12px 0;border-top:1px solid rgba(255,255,255,.12)}
+.route li:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
+.route b{flex:1 1 240px;font-weight:600}
+.route span{font:500 13px/1.3 var(--f-mono);color:var(--amber);letter-spacing:.04em}
+.note{font-size:14px;color:var(--steel-2);margin:10px 0 24px}
+.sub{font:500 12px/1.3 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--steel-2);margin:0 0 12px}
+.tips{margin:0 0 26px;padding:0;list-style:none;display:grid;gap:10px}
+.tips li{position:relative;padding-left:22px;color:var(--ink-2);font-size:15.5px}
+.tips li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#9fb1bb 60%,#566a75)}
+.addrs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.addr{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px 16px;border-radius:10px;
+  background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.03) 50%,rgba(255,255,255,.07));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),inset 0 0 0 1px rgba(255,255,255,.1)}
+.addr b{font:500 11.5px/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+.addr span{font-size:15px;color:var(--ink);overflow-wrap:anywhere;user-select:all}
+.acts{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;margin-top:4px}
+.hotel .acts{margin:0}
+.maplink{white-space:nowrap;font:600 12px/1 var(--f-mono);letter-spacing:.06em;color:var(--teal);padding:12px 2px;min-height:44px;display:inline-flex;align-items:center}
+
+/* sea */
+.duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}
+.duo .stop::before{display:none}
+.duo h3{margin-bottom:10px}
+.duo ul{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.duo li{position:relative;padding-left:20px;color:var(--ink-2);font-size:15px}
+.duo li::before{content:"";position:absolute;left:2px;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--teal)}
+.duo .rough li::before{background:var(--coral)}
+
+/* skipped */
+.skip{margin:0;padding:0;list-style:none}
+.skip li{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:4px 24px;padding:14px 0;border-top:1px solid rgba(255,255,255,.12)}
+.skip li:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
+.skip b{font-weight:600}
+.skip span{color:var(--ink-2);font-size:15.5px}
+@media (max-width:640px){.skip li{grid-template-columns:minmax(0,1fr)}}
+
+/* bag */
+.bag{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px 22px;margin:0;padding:0;list-style:none}
+.bag label{display:flex;align-items:center;gap:12px;cursor:pointer;color:var(--ink-2);font-size:15.5px}
+.bag input{width:18px;height:18px;accent-color:var(--amber);flex:none}
+.bag input:checked+span{opacity:.55;text-decoration:line-through}
+
+/* foot */
+.foot{font-size:14px;color:var(--ink-2)}
+.foot ul{margin:8px 0 18px;padding:0;list-style:none;display:grid;gap:6px}
+.foot li{overflow-wrap:anywhere}
+.foot p+p{margin-top:8px}
+
+@media (max-width:720px){
+  .page{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+  .glass{-webkit-backdrop-filter:blur(10px) saturate(1.2);backdrop-filter:blur(10px) saturate(1.2)}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px}
+  .facts dd{font-size:1rem}
+  .timeline{padding-left:30px}
+  .timeline::before{left:6px}
+  .stop::before{left:-30px;top:18px;width:15px;height:15px}
+  details.stop summary{padding:14px}
+  details.stop .body{padding:0 14px 14px}
+  .stop p{font-size:16px}
+  .tl-tools{justify-content:stretch}
+  .tl-tools .ghost{width:100%}
+  .bag label{min-height:44px}
+  .bag input{width:24px;height:24px}
+  .dock{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;gap:4px;
+    padding:6px max(8px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px));
+    background:linear-gradient(180deg,rgba(255,255,255,.16),rgba(255,255,255,.03)),rgba(6,20,28,.88);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.38),0 -10px 30px rgba(0,0,0,.4)}
+  .dock a,.dock button{flex:1 1 0;min-width:0;min-height:48px;display:flex;align-items:center;justify-content:center;
+    font:600 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--steel);
+    background:transparent;border:0;border-radius:6px;cursor:pointer}
+  .dock [aria-current="true"]{color:var(--night);background:linear-gradient(180deg,#f2f6f8,#a9b9c3)}
+  .dock #nowBtn{color:var(--night);background:linear-gradient(180deg,#ffd593,#d99a2f)}
+}
+.meta a.mp{font:600 12px/1.3 var(--f-mono);letter-spacing:.03em;padding:6px 12px;border-radius:999px;background:rgba(67,209,193,.12);box-shadow:inset 0 0 0 1px rgba(67,209,193,.45);color:var(--teal);text-decoration:none}
+
+/* planner */
+.planner{margin:0 0 26px;padding:18px;border-radius:10px;
+  background:linear-gradient(135deg,rgba(255,255,255,.1),rgba(255,255,255,.03) 50%,rgba(255,255,255,.07));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),inset 0 0 0 1px rgba(255,255,255,.1)}
+.planner h3{margin-bottom:6px}
+.hint2{color:var(--ink-2);font-size:15px;margin-bottom:16px;max-width:62ch}
+.pl-set{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:flex-end;margin-bottom:14px}
+.fld{display:grid;gap:5px;font:500 11px/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--steel-2)}
+.fld select{font:500 16px/1.2 var(--f-body);letter-spacing:0;text-transform:none;color:var(--ink);background:rgba(0,0,0,.38);border:0;border-radius:4px;padding:10px 12px;min-height:44px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.24)}
+.fld select option{background:#0b2531;color:#e6edf1}
+.picks{margin:0 0 14px;padding:0;list-style:none}
+.pick{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:6px 14px;align-items:center;padding:10px 0;border-top:1px solid rgba(255,255,255,.12)}
+.pick:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
+.pick .nm{display:flex;gap:12px;align-items:flex-start;cursor:pointer;min-width:0}
+.pick input{width:22px;height:22px;accent-color:var(--amber);flex:none;margin:2px 0 0}
+.pick .nm b{display:block;font-weight:600;line-height:1.35}
+.pick .nm small{display:block;color:var(--steel-2);font-size:13.5px;line-height:1.4}
+.step{display:inline-flex;align-items:center;gap:3px}
+.step button{width:40px;height:44px;font:600 18px/1 var(--f-mono);color:var(--steel);background:rgba(255,255,255,.08);border:0;border-radius:4px;cursor:pointer;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.step button:disabled{opacity:.35;cursor:default}
+.step output{min-width:58px;text-align:center;font:500 13px/1 var(--f-mono);color:var(--amber)}
+.pick.off .nm b,.pick.off .nm small,.pick.off .step output{opacity:.5}
+.pick .maplink{padding:12px 0}
+.status{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.status li{padding:10px 12px;border-radius:6px;font-size:14.5px;line-height:1.5;color:var(--ink);background:rgba(255,255,255,.06);box-shadow:inset 3px 0 0 var(--teal)}
+.status li.warn{box-shadow:inset 3px 0 0 var(--coral)}
+.seg.wait{--c:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.12))}
+.lnk{display:flex;flex-wrap:wrap;gap:0 18px;margin-top:6px}
+.lnk a{font:600 12px/1 var(--f-mono);letter-spacing:.05em;color:var(--teal);text-decoration:none;padding:10px 0;display:inline-flex;align-items:center}
+.lnk a:hover{text-decoration:underline}
+.leg{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:2px 14px;padding:0 4px 0 6px;font:500 12.5px/1.4 var(--f-mono);color:var(--steel-2)}
+.leg::before{content:"";position:absolute;left:-28px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:#7d909b;box-shadow:0 0 0 3px rgba(6,20,28,.85)}
+.leg a{color:var(--teal);text-decoration:none;padding:8px 0;font-weight:600}
+.leg a:hover{text-decoration:underline}
+@media (max-width:720px){
+  .planner{padding:14px}
+  .pick{grid-template-columns:auto minmax(0,1fr);gap:4px 14px}
+  .pick .nm{grid-column:1 / -1}
+  .pick .step{margin-left:34px}
+  .pick .maplink{justify-self:end;padding:12px 0}
+  .leg::before{left:-27px}
+  .fld{flex:1 1 140px}
+  .fld select{width:100%}
+}
+</style>
+
+<div class="stage" aria-hidden="true">
+  <canvas id="scene"></canvas>
+  <div class="brush"></div>
+  <div class="sheen"></div>
+</div>
+
+<main class="page" lang="tr">
+
+  <header class="glass hero">
+    <p class="eyebrow">San Juan, Puerto Rico · Pazartesi</p>
+    <h1><span class="chrome ln">7 Aralık</span><span class="chrome ln">San Juan</span></h1>
+    <p class="lede">Sabah Old San Juan'ın kalelerinde ve surlarında, öğleden sonra Isla Verde'de Atlantik Okyanusu'nda. Yolda az vakit gitsin diye Uber yolculukları en aza indirildi, gerisi yürüyüş.</p>
+    <ul class="chips">
+      <li id="chipStart">08:15 çıkış</li>
+      <li id="chipEnd">18:00 otelde</li>
+      <li id="chipUber">3 Uber</li>
+    </ul>
+    <div class="hotel">
+      <p><strong>Homewood Suites by Hilton San Juan City Center</strong>625 Av. Manuel Fernández Juncos, San Juan, PR 00907</p>
+      <div class="acts"><a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Homewood%20Suites%20by%20Hilton%20San%20Juan%20City%20Center%2C%20625%20Av.%20Manuel%20Fern%C3%A1ndez%20Juncos%2C%20San%20Juan%2C%20PR%2000907" target="_blank" rel="noopener">Haritada aç</a></div>
+    </div>
+    <dl class="facts">
+      <div><dt>Deniz suyu</dt><dd>≈ 27 °C<small>Aralık ortalaması</small></dd></div>
+      <div><dt>Gün batımı</dt><dd>≈ 17:40<small>Plajdan izlenebilir</small></dd></div>
+      <div><dt>Kale bileti</dt><dd>$10<small>Yetişkin, iki kale tek bilet</small></dd></div>
+      <div><dt>Araçta toplam</dt><dd><span id="factRoad">≈ 1 sa 25 dk</span><small>İhtiyatlı tahmin, Uber yolculukları</small></dd></div>
+    </dl>
+  </header>
+
+  <section class="glass" id="plan">
+    <h2 class="chrome">Günün akışı</h2>
+    <p class="lede">Pazartesi günü Casa del Libro ve Eczacılık Müzesi gibi bazı Old San Juan müzeleri ve Capilla del Cristo kapalı. İki büyük kale ise her gün açık. Öğleden sonra için Balneario de Carolina Pazartesi kapalı olduğundan plaj olarak Isla Verde'nin Hobie Beach bölümü seçildi.</p>
+
+    <div class="planner">
+      <h3>Planı kendiniz kurun</h3>
+      <p class="hint2">Durakları açıp kapatın, sürelerini değiştirin. Saatler, yürüyüşler ve Uber yolculukları otomatik yeniden hesaplanır. Seçimleriniz bu cihazda saklanır.</p>
+      <div class="pl-set">
+        <label class="fld">Otelden çıkış<select id="selStart"></select></label>
+        <label class="fld">Plaj süresi<select id="selBeach"></select></label>
+        <button type="button" class="ghost" id="resetPlan">Önerilen plana dön</button>
+      </div>
+      <ul class="picks" id="picks"></ul>
+      <ul class="status" id="planStatus" aria-live="polite"></ul>
+    </div>
+
+    <div class="strip" id="strip" role="img" aria-label="Gün şeridi"></div>
+    <div class="ticks" id="ticks" aria-hidden="true"></div>
+    <ul class="legend">
+      <li><i style="--c:linear-gradient(180deg,#e8eef2,#8fa1ac)"></i>Yol (Uber)</li>
+      <li><i style="--c:linear-gradient(180deg,#ffd593,#d99a2f)"></i>Kale</li>
+      <li><i style="--c:linear-gradient(180deg,#ffa488,#d9573a)"></i>Gezi, yürüyüş, yemek</li>
+      <li><i style="--c:linear-gradient(180deg,#8ff0e3,#1f9e93)"></i>Okyanus</li>
+      <li><i style="--c:linear-gradient(180deg,rgba(255,255,255,.3),rgba(255,255,255,.12))"></i>Bekleme</li>
+    </ul>
+
+    <div class="tl-tools"><button type="button" class="ghost" id="toggleAll">Tümünü kapat</button></div>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <section class="glass" id="yol">
+    <h2 class="chrome">Yollar ve Uber</h2>
+    <p class="lede">Gün boyunca birkaç araç yolculuğu var, gerisi yürüyüş. Liste seçtiğiniz plana göre güncellenir.</p>
+
+    <ul class="route" id="routeList"></ul>
+    <p class="note">Süreler tahmindir. Uber uygulaması çağırmadan hemen önce o andaki gerçek süreyi gösterir.</p>
+
+    <p class="sub">Dikkat edilecekler</p>
+    <ul class="tips">
+      <li>Sabah 08:00 civarı şehir trafiği yoğun olabilir. Kaleye 09:00 açılışında girecek şekilde çıkın, erken varırsanız bekleme olur. Çıkış saatini planlayıcıdan ayarlayabilirsiniz.</li>
+      <li>El Morro'da sürücü sizi sokağın ucunda bırakır. Kale girişine çimenlik boyunca yürürsünüz.</li>
+      <li>Old San Juan'dan dönüş çağrısını geniş bir noktadan yapın. Plaza Colón buna uygun.</li>
+      <li>Gemi gelen günlerde Old San Juan çok kalabalıklaşır. Kalelere sabah erken girmek bu yüzden önemli.</li>
+    </ul>
+
+    <p class="sub">Uber'e yapıştırılacak adresler (seçili duraklar)</p>
+    <div class="addrs" id="addrs"></div>
+  </section>
+
+  <section class="glass" id="deniz">
+    <h2 class="chrome">Okyanusa girmek</h2>
+    <p class="lede">Karşındaki Atlantik Okyanusu, havuz değil. Isla Verde şehrin yüzmeye en uygun plajı olarak anılıyor, yine de her gün deniz durumuna bakmak gerekir.</p>
+    <div class="duo">
+      <article class="stop">
+        <h3>Deniz uygunsa</h3>
+        <ul>
+          <li>Yeşil bayrakta ve cankurtaran gözü önündeyken suya girin. Sarı bayrakta dikkatli olun.</li>
+          <li>Pine Grove'un batı ucu resifle korunuyor, sular sığ ve sakin. Doğu ucu ise dalgalı, sörfçüler orada.</li>
+          <li>Tek başına açılmayın. Yüzmeyi bilmeyen biri varsa kıyıya yakın durun.</li>
+          <li>Akıntıya yakalanırsanız panik yapmayın, kıyıya paralel yüzün, sonra kıyıya dönün.</li>
+        </ul>
+      </article>
+      <article class="stop rough">
+        <h3>Deniz sertse</h3>
+        <ul>
+          <li>Kırmızı bayrak, yüksek dalga ya da akıntı uyarısı varsa suya girmeyin.</li>
+          <li>Kışın kuzeyden gelen dalgalar Condado ve Ocean Park'ı etkiler, bu yüzden o plajlara yönelmeyin. Condado'da kışın güçlü akıntılar görülür.</li>
+          <li>Yedek plan olarak otelin açık havuzu var. Plaj saatini kısaltıp havuzda vakit geçirebilirsiniz.</li>
+          <li>Pazartesi cankurtaran bulunup bulunmadığını plajdaki kulübeden sorun.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="glass" id="elenen">
+    <h2 class="chrome">Pazartesi'ye göre elenenler</h2>
+    <p class="lede">Bu yerler güzel, ama 7 Aralık Pazartesi için varsayılan plana girmediler.</p>
+    <ul class="skip">
+      <li><b>Balneario de Carolina</b><span>16 Ağustos ile 14 Mayıs arası Salı-Pazar açık (08:00-17:00). Pazartesi tatil değilse kapalı. Duş, dolap ve cankurtaran hizmeti de kapalı olur.</span></li>
+      <li><b>Balneario El Escambrón</b><span>Eski bir rehbere göre Eylül-Mart arası Pazartesi ve Salı hizmetler ve cankurtaran kapalı. Suya girilebilir ama cankurtaran yok.</span></li>
+      <li><b>Casa Bacardí</b><span>Pazartesi açık (resmî site 10:00-20:00). Planlayıcıdan isterseniz ekleyebilirsiniz, ama Cataño yolu plaj süresini keser. Feribot 13:00-15:00 arası çalışmıyor, bu yüzden Uber önerilir.</span></li>
+      <li><b>Capilla del Cristo</b><span>Yalnızca Salı günleri ziyarete açık. Pazartesi dışarıdan görülür, planda Parque de las Palomas ile birlikte duruyor.</span></li>
+      <li><b>Old San Juan müzeleri</b><span>Casa del Libro ve Eczacılık Müzesi gibi yerler Pazartesi kapalı, Salı-Cumartesi açık.</span></li>
+    </ul>
+  </section>
+
+  <section class="glass" id="canta">
+    <h2 class="chrome">Çanta listesi</h2>
+    <p class="lede">İşaretledikleriniz bu cihazda hatırlanır.</p>
+    <ul class="bag" id="bag">
+      <li><label><input type="checkbox" id="b1"><span>Mayo ve yedek giysi (plajdan sonra değiştirmek için)</span></label></li>
+      <li><label><input type="checkbox" id="b2"><span>Plaj havlusu</span></label></li>
+      <li><label><input type="checkbox" id="b3"><span>Güneş kremi</span></label></li>
+      <li><label><input type="checkbox" id="b4"><span>Şapka ve güneş gözlüğü</span></label></li>
+      <li><label><input type="checkbox" id="b5"><span>Su şişesi</span></label></li>
+      <li><label><input type="checkbox" id="b6"><span>Rahat yürüyüş ayakkabısı (kalelerde basamaklar düzensiz)</span></label></li>
+      <li><label><input type="checkbox" id="b7"><span>Plaj için terlik</span></label></li>
+      <li><label><input type="checkbox" id="b8"><span>Kimlik veya pasaport (La Fortaleza turu için)</span></label></li>
+      <li><label><input type="checkbox" id="b9"><span>Telefon için su geçirmez kılıf</span></label></li>
+      <li><label><input type="checkbox" id="b10"><span>Yedek şarj aleti</span></label></li>
+    </ul>
+  </section>
+
+  <footer class="glass foot">
+    <p class="sub">Bilgiler 2 Kasım 2026'da internetten derlendi</p>
+    <p>Kale saatleri kaynaklara göre değişiyor, açılış 9:00 civarı, kapanış 17:00 ile 18:00 arasında yazılıyor. Gitmeden önce nps.gov/saju sayfasından, La Fortaleza turu için telefonla doğrulayın.</p>
+    <p class="sub" style="margin-top:18px">Kaynaklar</p>
+    <ul>
+      <li><a href="https://www.hilton.com/en/hotels/sjajchw-homewood-suites-san-juan-city-center/" target="_blank" rel="noopener">Hilton, Homewood Suites by Hilton San Juan City Center</a></li>
+      <li><a href="https://www.nps.gov/saju" target="_blank" rel="noopener">Milli Park Servisi, San Juan National Historic Site</a></li>
+      <li><a href="https://www.discoverpuertorico.com/index.php/article/exploring-castillo-san-felipe-del-morro-old-san-juan" target="_blank" rel="noopener">Discover Puerto Rico, El Morro</a></li>
+      <li><a href="https://www.afar.com/places/la-fortaleza-san-juan" target="_blank" rel="noopener">Afar, La Fortaleza</a></li>
+      <li><a href="https://www.aaa.com/tripcanvas/attraction/playa-isla-verde-VA100741" target="_blank" rel="noopener">AAA, Playa Isla Verde</a></li>
+      <li><a href="https://www.discoverpuertorico.com/profile/balneario-de-carolina" target="_blank" rel="noopener">Discover Puerto Rico, Balneario de Carolina</a></li>
+      <li><a href="https://www.bacardi.com/us/en/casa-bacardi/" target="_blank" rel="noopener">Casa Bacardí</a></li>
+      <li><a href="https://sanjuancruiseport.com/short-trips/rum-waterfront-charm/" target="_blank" rel="noopener">San Juan Cruise Port, Cataño feribotu</a></li>
+    </ul>
+  </footer>
+
+</main>
+
+<nav class="dock" aria-label="Bölümler">
+  <a href="#plan" data-sec="plan">Plan</a>
+  <a href="#yol" data-sec="yol">Yol</a>
+  <a href="#deniz" data-sec="deniz">Deniz</a>
+  <a href="#canta" data-sec="canta">Çanta</a>
+  <button type="button" id="nowBtn" hidden>Şimdi</button>
+</nav>
+
+<script>
+(function () {
+  /* ---------- scene ---------- */
+  var cv = document.getElementById('scene');
+  var ctx = cv && cv.getContext ? cv.getContext('2d') : null;
+  var lw = 0, lh = 0;
+
+  function mulberry(a) {
+    return function () {
+      a |= 0; a = a + 0x6D2B79F5 | 0;
+      var t = Math.imul(a ^ a >>> 15, 1 | a);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    };
+  }
+
+  function paint() {
+    if (!ctx) return;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w = window.innerWidth, h = window.innerHeight;
+    lw = w; lh = h;
+    cv.width = Math.round(w * dpr);
+    cv.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    var R = mulberry(2026);
+    var hz = h * 0.54;
+    var u = Math.max(0.6, Math.min(1.3, w / 1300));
+    var i, g, x, y, t;
+
+    /* sky */
+    g = ctx.createLinearGradient(0, 0, 0, hz);
+    g.addColorStop(0, '#04121a');
+    g.addColorStop(0.45, '#0d3a4a');
+    g.addColorStop(0.78, '#2a7a80');
+    g.addColorStop(0.93, '#e59a63');
+    g.addColorStop(1, '#ffc27a');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, w, hz + 1);
+
+    /* sun */
+    var sx = w * 0.72, sy = hz - h * 0.03, sr = Math.min(w, h) * 0.07;
+    g = ctx.createRadialGradient(sx, sy, 0, sx, sy, sr * 5);
+    g.addColorStop(0, 'rgba(255,236,190,.95)');
+    g.addColorStop(0.12, 'rgba(255,200,130,.7)');
+    g.addColorStop(0.4, 'rgba(255,140,90,.25)');
+    g.addColorStop(1, 'rgba(255,120,80,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, w, hz + 1);
+    ctx.fillStyle = '#fff1cf';
+    ctx.beginPath(); ctx.arc(sx, sy, sr, 0, Math.PI * 2); ctx.fill();
+
+    /* cloud streaks */
+    for (i = 0; i < 8; i++) {
+      y = hz * (0.16 + R() * 0.6); x = R() * w;
+      var len = w * (0.12 + R() * 0.28), th = 2 + R() * 6;
+      ctx.fillStyle = 'rgba(255,170,120,' + (0.05 + R() * 0.12) + ')';
+      ctx.beginPath(); ctx.ellipse(x, y, len / 2, th, 0, 0, Math.PI * 2); ctx.fill();
+    }
+
+    /* sea */
+    g = ctx.createLinearGradient(0, hz, 0, h);
+    g.addColorStop(0, '#2d8286');
+    g.addColorStop(0.12, '#145766');
+    g.addColorStop(0.5, '#082d3b');
+    g.addColorStop(1, '#04141c');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, hz, w, h - hz);
+
+    /* sun glitter */
+    for (i = 0; i < 280; i++) {
+      t = R();
+      y = hz + Math.pow(t, 1.6) * (h - hz) * 0.55;
+      var spread = sr * (0.6 + t * 3.2);
+      x = sx + (R() - 0.5) * 2 * spread;
+      var gl = 6 + R() * 30 * (0.4 + t);
+      ctx.fillStyle = 'rgba(255,214,150,' + ((1 - t) * 0.55 * R()) + ')';
+      ctx.fillRect(x - gl / 2, y, gl, 1.2 + t * 1.5);
+    }
+    /* wave lines */
+    for (i = 0; i < 100; i++) {
+      t = R();
+      y = hz + 4 + Math.pow(t, 1.3) * (h - hz) * 0.7;
+      x = R() * w;
+      ctx.fillStyle = 'rgba(180,230,235,' + (0.03 + R() * 0.07) + ')';
+      ctx.fillRect(x, y, 20 + t * 140 * R(), 1);
+    }
+    /* horizon haze */
+    g = ctx.createLinearGradient(0, hz - 8, 0, hz + 26);
+    g.addColorStop(0, 'rgba(255,190,130,0)');
+    g.addColorStop(0.3, 'rgba(255,190,130,.35)');
+    g.addColorStop(1, 'rgba(255,190,130,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, hz - 8, w, 34);
+
+    /* El Morro silhouette */
+    (function () {
+      var s = Math.max(180, Math.min(w * 0.4, 560)) / 520;
+      ctx.save();
+      ctx.translate(w * 0.04, hz + h * 0.035);
+      ctx.scale(s, s);
+      ctx.fillStyle = '#0a1d26';
+      ctx.beginPath();
+      ctx.moveTo(0, 10);
+      ctx.lineTo(10, -14); ctx.lineTo(70, -30); ctx.lineTo(70, -60); ctx.lineTo(140, -66);
+      for (var cx = 140; cx < 360; cx += 14) {
+        ctx.lineTo(cx, -66); ctx.lineTo(cx, -74); ctx.lineTo(cx + 8, -74); ctx.lineTo(cx + 8, -66);
+      }
+      ctx.lineTo(360, -66);
+      ctx.lineTo(360, -120); ctx.lineTo(372, -120); ctx.lineTo(372, -150); ctx.lineTo(388, -150);
+      ctx.lineTo(388, -120); ctx.lineTo(400, -120); ctx.lineTo(400, -70);
+      ctx.lineTo(470, -60); ctx.lineTo(520, -24); ctx.lineTo(540, 10);
+      ctx.closePath();
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(255,190,120,.35)';
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      /* upper block with merlons */
+      ctx.fillRect(176, -104, 150, 40);
+      for (var m = 176; m < 326; m += 12) ctx.fillRect(m, -111, 7, 7);
+      /* sentry boxes */
+      function garita(gx, gy) {
+        ctx.fillRect(gx - 6, gy - 22, 12, 22);
+        ctx.beginPath(); ctx.arc(gx, gy - 22, 6, Math.PI, 0); ctx.fill();
+      }
+      garita(78, -60); garita(412, -70);
+      /* flag */
+      ctx.fillRect(379, -195, 1.6, 45);
+      ctx.fillStyle = 'rgba(255,122,89,.85)';
+      ctx.fillRect(380.6, -195, 16, 9);
+      ctx.restore();
+    })();
+
+    /* Old San Juan facades */
+    var pal = ['#e8a23a', '#d8574b', '#2aa7a0', '#3b73ba', '#e2799f', '#f0cf68', '#78b45e', '#9a6bb8', '#ef8a4c', '#4fb7d9'];
+
+    function building(bx, by, bw, bh, col, dark) {
+      var top = by - bh;
+      var floors = Math.max(2, Math.round(bh / (48 * u)));
+      var fh = bh / floors;
+      var cols = Math.max(2, Math.floor(bw / (34 * u)));
+      var cell = bw / cols;
+      var a, b;
+      ctx.fillStyle = col; ctx.fillRect(bx, top, bw, bh);
+      var sg = ctx.createLinearGradient(0, top, 0, by);
+      sg.addColorStop(0, 'rgba(255,175,115,.20)');
+      sg.addColorStop(1, 'rgba(4,18,28,.5)');
+      ctx.fillStyle = sg; ctx.fillRect(bx, top, bw, bh);
+      if (dark) { ctx.fillStyle = 'rgba(6,28,40,' + dark + ')'; ctx.fillRect(bx, top, bw, bh); }
+      ctx.fillStyle = 'rgba(255,255,255,.22)'; ctx.fillRect(bx - 2, top, bw + 4, 4 * u);
+      ctx.fillStyle = 'rgba(0,0,0,.28)'; ctx.fillRect(bx - 2, top + 4 * u, bw + 4, 2 * u);
+      var doorCol = Math.floor(R() * cols);
+      for (a = 0; a < floors; a++) {
+        var fy = top + a * fh;
+        for (b = 0; b < cols; b++) {
+          var cx0 = bx + b * cell;
+          if (a === floors - 1 && b === doorCol) {
+            var dw = cell * 0.46, dh = fh * 0.74, dx = cx0 + (cell - dw) / 2;
+            ctx.fillStyle = 'rgba(4,16,24,.88)';
+            ctx.beginPath();
+            ctx.moveTo(dx, by); ctx.lineTo(dx, by - dh + dw / 2);
+            ctx.arc(dx + dw / 2, by - dh + dw / 2, dw / 2, Math.PI, 0);
+            ctx.lineTo(dx + dw, by); ctx.closePath(); ctx.fill();
+            continue;
+          }
+          var ww = cell * 0.4, wh = fh * 0.46, wx = cx0 + (cell - ww) / 2, wy = fy + fh * 0.22;
+          ctx.fillStyle = R() < 0.2 ? 'rgba(255,214,145,.92)' : 'rgba(4,18,28,.82)';
+          ctx.fillRect(wx, wy, ww, wh);
+          ctx.fillStyle = 'rgba(255,255,255,.2)'; ctx.fillRect(wx - 1, wy + wh, ww + 2, 1.5);
+          if (a === 1 && floors >= 3) {
+            ctx.fillStyle = 'rgba(4,18,28,.75)';
+            ctx.fillRect(cx0 + cell * 0.08, wy + wh + 1, cell * 0.84, 2.2);
+            for (var k = 0; k < 6; k++) ctx.fillRect(cx0 + cell * 0.1 + k * (cell * 0.8 / 5), wy + wh - wh * 0.28, 1.2, wh * 0.28 + 1);
+          }
+        }
+      }
+    }
+
+    function row(baseY, hMin, hMax, wMin, wMax, dark) {
+      var rx = -20;
+      while (rx < w + 20) {
+        var bw = wMin + R() * (wMax - wMin);
+        var bh = hMin + R() * (hMax - hMin);
+        building(rx, baseY, bw, bh, pal[Math.floor(R() * pal.length)], dark);
+        rx += bw + (R() < 0.3 ? 3 : 0);
+      }
+    }
+    row(h - h * 0.045, Math.max(90, h * 0.15), Math.max(150, h * 0.25), 80 * u, 140 * u, 0.5);
+    row(h + 2, Math.max(60, h * 0.11), Math.max(110, h * 0.2), 64 * u, 110 * u, 0);
+
+    /* palms */
+    function palm(px, py, ph, lean) {
+      ctx.strokeStyle = '#04141c'; ctx.lineCap = 'round';
+      ctx.lineWidth = Math.max(3, ph * 0.03);
+      var tx = px + lean, ty = py - ph;
+      ctx.beginPath(); ctx.moveTo(px, py); ctx.quadraticCurveTo(px + lean * 0.2, py - ph * 0.6, tx, ty); ctx.stroke();
+      for (var f = 0; f < 9; f++) {
+        var ang = -Math.PI / 2 + (f - 4) * 0.42 + (R() - 0.5) * 0.15;
+        var L = ph * (0.32 + R() * 0.12);
+        var ex = tx + Math.cos(ang) * L, ey = ty + Math.sin(ang) * L * 0.55 + L * 0.45;
+        var qx = tx + Math.cos(ang) * L * 0.55, qy = ty + Math.sin(ang) * L * 0.9 - L * 0.1;
+        ctx.lineWidth = Math.max(2, ph * 0.018);
+        ctx.beginPath(); ctx.moveTo(tx, ty); ctx.quadraticCurveTo(qx, qy, ex, ey); ctx.stroke();
+      }
+    }
+    palm(w * 0.93, h - h * 0.03, h * 0.34, -18 * u);
+    palm(w * 0.87, h - h * 0.02, h * 0.23, 22 * u);
+  }
+
+  paint();
+  var tm;
+  window.addEventListener('resize', function () {
+    clearTimeout(tm);
+    tm = setTimeout(function () {
+      if (window.innerWidth !== lw || Math.abs(window.innerHeight - lh) > 140) paint();
+    }, 150);
+  });
+
+  /* ---------- bag checklist ---------- */
+  var KEY = 'sj-7aralik-canta', saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { saved = {}; }
+  var boxes = document.querySelectorAll('#bag input[type=checkbox]');
+  Array.prototype.forEach.call(boxes, function (cb) {
+    if (saved[cb.id]) cb.checked = true;
+    cb.addEventListener('change', function () {
+      saved[cb.id] = cb.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+    });
+  });
+
+  /* ---------- planner: data ---------- */
+  var HOTEL = { n: 'Otel', a: 'Homewood Suites by Hilton San Juan City Center, 625 Av. Manuel Fernández Juncos, San Juan, PR 00907' };
+  var BEACH = { n: 'Hobie Beach', a: 'Hobie Beach, Isla Verde, Carolina, PR 00979' };
+  var COLON = { n: 'Plaza Colón', a: 'Plaza Colón, Old San Juan, PR 00901' };
+
+  /* walk = minutes on foot from the previous pool stop (summed when stops in between are off) */
+  var POOL = [
+    { id: 'morro', title: 'El Morro', short: 'El Morro', sub: 'Atlantik\'e bakan 16. yüzyıl kalesi', kind: 'fort', on: true, dur: 75, min: 30, max: 180, walk: 0, opens: 540,
+      places: [{ n: 'El Morro', a: 'Castillo San Felipe del Morro, Calle Norzagaray, San Juan, PR 00901' }],
+      chips: ['$10 yetişkin', '15 yaş ve altı ücretsiz'],
+      body: ['San Juan\'ın simgesi olan 16. yüzyıl kalesi, UNESCO Dünya Mirası listesinde. Atlantik\'e bakan yedi katlı surları, rampaları, fener kulesi ve önündeki geniş çimenlik alanı var. Milli Park Servisi 1 ile 3 saat arası öneriyor, süreyi yukarıdan ayarlayabilirsiniz.',
+        'Erken girince hem serin hem sakin olur. Bazı kaynaklar kalenin açılışını 9:30 olarak yazıyor, bu yüzden sabah nps.gov/saju sayfasından saati bir kez kontrol edin.'] },
+    { id: 'mezarlik', title: 'Santa María Magdalena de Pazzis Mezarlığı', short: 'Mezarlık', sub: 'Okyanus kıyısında tarihî mezarlık', kind: 'sight', on: false, dur: 25, min: 15, max: 60, walk: 8, opens: 0,
+      places: [{ n: 'Mezarlık', a: 'Cementerio Santa María Magdalena de Pazzis, San Juan, PR 00901' }],
+      chips: ['Dışarıdan gezilir', 'Saatleri doğrulayın'],
+      body: ['El Morro\'nun hemen yanında, doğrudan okyanus kıyısında, 19. yüzyıldan kalma beyaz mezarlık. Old San Juan\'ın en çok fotoğraflanan manzaralarından biri.',
+        'Giriş saatleri kaynaklarda net değil, yerinde kontrol edin. Çevrede zaman zaman soygun bildirildiği için gündüz ve grup halinde gidin, telefon ve çantanızı elinizde taşımayın.'] },
+    { id: 'cristobal', title: 'Castillo San Cristóbal', short: 'San Cristóbal', sub: 'Yeni Dünya\'nın en büyük kalesi', kind: 'fort', on: true, dur: 60, min: 30, max: 150, walk: 22, opens: 540,
+      places: [{ n: 'San Cristóbal', a: 'Castillo San Cristóbal, 501 Calle Norzagaray, San Juan, PR 00901' }],
+      chips: ['El Morro bileti geçerli', 'Ziyaretçi merkezi: 501 Calle Norzagaray'],
+      body: ['Yeni Dünya\'da inşa edilmiş en büyük kale. Kara saldırılarına karşı yapıldı. Tünellerini, geniş surlarını ve Garita del Diablo\'yu (Şeytan\'ın nöbetçi kulübesi) gezin. El Morro bileti burada da geçerli, ayrı bilet almanız gerekmez.'] },
+    { id: 'merkez', title: 'Plaza de Armas ve Calle del Cristo', short: 'Plaza de Armas', sub: 'Renkli sokaklar, Capilla del Cristo, Parque de las Palomas', kind: 'sight', on: true, dur: 30, min: 15, max: 90, walk: 12, opens: 0,
+      places: [{ n: 'Plaza de Armas', a: 'Plaza de Armas, Old San Juan, PR 00901' }, { n: 'Capilla del Cristo', a: 'Capilla del Cristo, Calle del Cristo, San Juan, PR 00901' }, { n: 'Parque de las Palomas', a: 'Parque de las Palomas, Old San Juan, PR 00901' }],
+      chips: ['Yürüyerek', 'Kilise Pazartesi dışarıdan'],
+      body: ['Plaza de Armas şehrin eski ana meydanı. Buradan renkli evlerle dolu Calle del Cristo boyunca Capilla del Cristo\'ya yürüyün. Küçük şapel yalnızca Salı günleri içeriden gezilebiliyor, Pazartesi dışarıdan görürsünüz.',
+        'Hemen yanındaki Parque de las Palomas\'ta güvercin sürüleri ve surların üstünden körfez manzarası var.'] },
+    { id: 'barrachina', title: 'Öğle yemeği: Barrachina', short: 'Öğle yemeği', sub: 'Mofongo ve piña colada durağı', kind: 'food', on: true, dur: 50, min: 30, max: 120, walk: 8, opens: 0,
+      places: [{ n: 'Barrachina', a: 'Barrachina, 104 Calle de la Fortaleza, San Juan, PR 00901' }],
+      chips: ['Pazartesi gün boyu açık'],
+      body: ['104 Calle de la Fortaleza adresinde. Mofongo ve piña colada için iyi bir durak, mekân piña coladayı 1963\'te icat ettiğini söylüyor. Hafta içi ikinci katta öğle büfesi var (11:00-15:00). Limana gemi yanaştıysa sıra uzayabilir, bu yüzden erken oturmak işe yarar.'] },
+    { id: 'fortaleza', title: 'La Fortaleza', short: 'La Fortaleza', sub: 'Valilik konutu, rezervasyonlu tur', kind: 'sight', on: false, dur: 45, min: 30, max: 90, walk: 5, opens: 0,
+      places: [{ n: 'La Fortaleza', a: 'La Fortaleza, Calle Fortaleza, San Juan, PR 00901' }],
+      chips: ['Tur için rezervasyon', 'Kimlik veya pasaport'],
+      body: ['Puerto Rico valisinin resmî konutu, Barrachina\'nın birkaç adım ötesinde. Hafta içi ücretsiz, 30 dakikalık turlar yapılıyor. Önceden rezervasyon yaptırmanız önerilir (787-721-7000). Tur için kimlik veya pasaport istenir, içeride fotoğraf yasak. Bina hükümet binası olduğu için turlar haber verilmeden iptal olabilir.'] },
+    { id: 'paseo', title: 'Paseo de la Princesa ve Puerta de San Juan', short: 'Paseo de la Princesa', sub: 'Surların dibinde yürüyüş yolu', kind: 'sight', on: true, dur: 25, min: 15, max: 75, walk: 5, opens: 0,
+      places: [{ n: 'Paseo de la Princesa', a: 'Paseo de la Princesa, San Juan, PR 00901' }, { n: 'Puerta de San Juan', a: 'Puerta de San Juan, San Juan, PR 00901' }, { n: 'Fuente Raíces', a: 'Fuente Raíces, Paseo de la Princesa, San Juan, PR 00901' }],
+      chips: ['Yürüyerek', 'Ücretsiz'],
+      body: ['Surların dibinde, eski sokak lambalarıyla süslü bir yürüyüş yolu. Sonunda Raíces çeşmesi ve körfez manzarası var. Yolun başındaki Puerta de San Juan, Old San Juan\'ın surlardaki tarihî kapılarından biri.',
+        'Isla Verde\'ye geçmeden önce güzel bir veda yürüyüşü.'] },
+    { id: 'bacardi', title: 'Casa Bacardí (Cataño)', short: 'Casa Bacardí', sub: 'Rom üretimi sergisi, körfezin karşı yakası', kind: 'sight', on: false, dur: 90, min: 60, max: 180, walk: 0, opens: 600, uber: true,
+      places: [{ n: 'Casa Bacardí', a: 'Casa Bacardí, Cataño, PR 00962' }],
+      chips: ['Uber gerekir', 'Plaj süresini kısaltır'],
+      body: ['Bacardí\'nin Cataño\'daki ziyaretçi merkezi. Rom üretiminin hikâyesini anlatan sergi ve geniş bahçesi var. Pazartesi açık, resmî sitede saatler 10:00-20:00 olarak görünüyor.',
+        'Feribot 13:00-15:00 arası çalışmıyor, bu yüzden Uber ile gitmek daha güvenli. Cataño\'dan Isla Verde\'ye de doğrudan Uber ile geçilir.'] }
+  ];
+  var DEF = { start: 8 * 60 + 30, beach: 180 };
+  var SUNSET = 17 * 60 + 40;
+  var PKEY = 'sj-plan-v2';
+  var state = null;
+
+  function defaults() {
+    var s = { on: {}, dur: {}, start: DEF.start, beach: DEF.beach };
+    POOL.forEach(function (p) { s.on[p.id] = p.on; s.dur[p.id] = p.dur; });
+    return s;
+  }
+  function loadState() {
+    var s = defaults(), r = null;
+    try { r = JSON.parse(localStorage.getItem(PKEY) || 'null'); } catch (e) { r = null; }
+    if (r && typeof r === 'object') {
+      POOL.forEach(function (p) {
+        if (r.on && typeof r.on[p.id] === 'boolean') s.on[p.id] = r.on[p.id];
+        var d = r.dur && +r.dur[p.id];
+        if (d && d >= p.min && d <= p.max && d % 15 === 0) s.dur[p.id] = d;
+      });
+      if (+r.start >= 480 && +r.start <= 570 && +r.start % 15 === 0) s.start = +r.start;
+      if (+r.beach >= 90 && +r.beach <= 240 && +r.beach % 30 === 0) s.beach = +r.beach;
+    }
+    return s;
+  }
+  function saveState() { try { localStorage.setItem(PKEY, JSON.stringify(state)); } catch (e) {} }
+
+  /* ---------- planner: helpers ---------- */
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function fmt(m) { return pad(Math.floor(m / 60)) + ':' + pad(m % 60); }
+  function durStr(m) {
+    var h = Math.floor(m / 60), r = m % 60;
+    if (!h) return m + ' dk';
+    return r ? h + ' sa ' + r + ' dk' : h + ' sa';
+  }
+  function placeUrl(a) { return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(a); }
+  function dirUrl(from, to, mode) {
+    return 'https://www.google.com/maps/dir/?api=1&origin=' + encodeURIComponent(from) + '&destination=' + encodeURIComponent(to) + '&travelmode=' + mode;
+  }
+  function link(href, text, cls) {
+    return '<a' + (cls ? ' class="' + cls + '"' : '') + ' href="' + esc(href) + '" target="_blank" rel="noopener">' + esc(text) + '</a>';
+  }
+  /* location node: where you stand before/after an item */
+  function nodeOf(p) { return { first: p.places[0].a, last: p.places[p.places.length - 1].a, name: p.places[0].n, idx: POOL.indexOf(p) }; }
+  var N_HOTEL = { first: HOTEL.a, last: HOTEL.a, name: 'Otel', idx: -1, hotel: true };
+  var N_BEACH = { first: BEACH.a, last: BEACH.a, name: 'Hobie Beach', idx: 99 };
+
+  /* ---------- planner: schedule ---------- */
+  function compute() {
+    var items = [], t = state.start, road = 0, ubers = 0, cur = N_HOTEL;
+    var sel = POOL.filter(function (p) { return state.on[p.id]; });
+    var waitWarn = [];
+
+    function uber(kind, to, dur) {
+      items.push({ k: 'uber', kind: kind, from: cur, to: to, t0: t, t1: t + dur, dur: dur });
+      t += dur; road += dur; ubers++;
+    }
+    sel.forEach(function (p) {
+      var to = nodeOf(p), i, w = 0;
+      if (cur.hotel) uber('start', to, 25);
+      else if (p.uber) uber('bacardi', to, 20);
+      else {
+        for (i = cur.idx + 1; i <= to.idx; i++) w += POOL[i].walk;
+        items.push({ k: 'walk', from: cur, to: to, t0: t, t1: t + w, dur: w });
+        t += w;
+      }
+      if (p.opens && t < p.opens) {
+        var gap = p.opens - t;
+        items.push({ k: 'wait', p: p, t0: t, t1: p.opens, dur: gap });
+        if (gap >= 10) waitWarn.push({ p: p, gap: gap });
+        t = p.opens;
+      }
+      var d = state.dur[p.id];
+      items.push({ k: 'stop', p: p, t0: t, t1: t + d, dur: d });
+      t += d;
+      cur = to;
+    });
+    uber(cur.hotel ? 'beachDirect' : 'beach', N_BEACH, cur.hotel ? 25 : 30);
+    cur = N_BEACH;
+    var bs = t;
+    items.push({ k: 'beach', t0: t, t1: t + state.beach, dur: state.beach });
+    t += state.beach;
+    var be = t;
+    uber('home', N_HOTEL, 30);
+    return { items: items, start: state.start, end: t, road: road, ubers: ubers, beachStart: bs, beachEnd: be, sel: sel, waits: waitWarn };
+  }
+
+  /* ---------- planner: render ---------- */
+  var picksEl = document.getElementById('picks');
+  var statusEl = document.getElementById('planStatus');
+  var tlEl = document.getElementById('timeline');
+  var stripEl = document.getElementById('strip');
+  var ticksEl = document.getElementById('ticks');
+  var routeEl = document.getElementById('routeList');
+  var addrsEl = document.getElementById('addrs');
+  var toggleBtn = document.getElementById('toggleAll');
+  var nowBtn = document.getElementById('nowBtn');
+  var selStart = document.getElementById('selStart');
+  var selBeach = document.getElementById('selBeach');
+  var phone = window.matchMedia ? window.matchMedia('(max-width:720px)').matches : false;
+  var calm = window.matchMedia ? window.matchMedia('(prefers-reduced-motion:reduce)').matches : false;
+  var TRIP = '2026-12-07', planEnd = 18 * 60, nowStop = null;
+  var stops = [], openMap = {};
+
+  function buildPicks() {
+    picksEl.innerHTML = POOL.map(function (p) {
+      return '<li class="pick" data-id="' + p.id + '">' +
+        '<label class="nm"><input type="checkbox"><span><b>' + esc(p.title) + '</b><small>' + esc(p.sub) + '</small></span></label>' +
+        '<span class="step"><button type="button" data-d="-15" aria-label="15 dakika azalt">−</button><output></output><button type="button" data-d="15" aria-label="15 dakika artır">+</button></span>' +
+        link(placeUrl(p.places[0].a), 'Haritada aç', 'maplink') + '</li>';
+    }).join('');
+    selStart.innerHTML = '';
+    for (var m = 480; m <= 570; m += 15) selStart.insertAdjacentHTML('beforeend', '<option value="' + m + '">' + fmt(m) + '</option>');
+    selBeach.innerHTML = '';
+    for (var b = 90; b <= 240; b += 30) selBeach.insertAdjacentHTML('beforeend', '<option value="' + b + '">' + (b % 60 ? (b / 60 - 0.5) + ',5 saat' : b / 60 + ' saat') + '</option>');
+  }
+  function syncPicks() {
+    POOL.forEach(function (p) {
+      var li = picksEl.querySelector('[data-id="' + p.id + '"]');
+      var on = !!state.on[p.id], d = state.dur[p.id];
+      li.classList.toggle('off', !on);
+      li.querySelector('input').checked = on;
+      li.querySelector('output').textContent = durStr(d);
+      var bt = li.querySelectorAll('.step button');
+      bt[0].disabled = !on || d <= p.min;
+      bt[1].disabled = !on || d >= p.max;
+    });
+    selStart.value = String(state.start);
+    selBeach.value = String(state.beach);
+  }
+
+  function uberCard(it) {
+    var to = it.to, from = it.from, title, paras = [], dest = to.name;
+    if (it.kind === 'start') {
+      title = 'Otelden çık';
+      paras.push('Kahvaltıyı otelde yapın, ücretsiz kahvaltı otel fiyatına dahil. Sabah normal günlük kıyafetle çıkın. Mayo ve yedek giysiler plaj çantasında olsun, böylece gün boyunca otele dönmeniz gerekmez.');
+      paras.push('Uber\'e hedef olarak ' + dest + ' yazın.' + (dest === 'El Morro' ? ' Sürücü sizi Calle Norzagaray\'ın ucunda bırakır, kale girişine çimenlik alan boyunca kısa bir yürüyüş kalır.' : ''));
+    } else if (it.kind === 'bacardi') {
+      title = 'Cataño\'ya geçiş (Casa Bacardí)';
+      paras.push('Körfezin karşı yakasına Uber ile geçin. Old San Juan\'ın dar sokaklarında araç çağırmak zor olduğu için buluşmayı Plaza Colón gibi geniş bir noktadan yapın.');
+    } else if (it.kind === 'beach' || it.kind === 'beachDirect') {
+      title = 'Isla Verde\'ye geçiş';
+      paras.push('Old San Juan\'ın dar ve tek yönlü sokaklarında Uber sürücüsünün size ulaşması zor olur. Çağrıyı Plaza Colón gibi araçların rahat girip çıktığı bir noktadan yapın. Varış noktası olarak Hobie Beach, Isla Verde yazın.');
+    } else {
+      title = 'Otele dönüş';
+      paras.push('Dönüşte yedek giysi giymek hem rahat hem Uber için daha uygun. Gün batımı (≈ 17:40) plajda izlenebilir. Otelin ücretsiz akşam resepsiyonu Pazartesi\'den Perşembe\'ye kadar yapılıyor, saatini resepsiyondan sorun.');
+    }
+    var d = dirUrl(from.last, to.first, 'driving');
+    return { key: 'u-' + it.kind, m: it.t0, html: card('u-' + it.kind, it.t0, it.t1, title, '', ['Uber', '≈ ' + it.dur + ' dk'], paras, [link(d, 'Yol tarifi'), link(placeUrl(to.first), 'Varış yeri: ' + to.name)], link(d, 'Yol tarifi', 'mp')) };
+  }
+  function card(key, t0, t1, title, tag, chips, paras, links, mini, opt) {
+    return '<details class="stop' + (opt ? ' opt' : '') + '" data-k="' + key + '" data-m="' + t0 + '">' +
+      '<summary><span class="top"><span class="t">' + fmt(t0) + '–' + fmt(t1) + '</span><h3>' + esc(title) + '</h3>' + (tag ? '<span class="tag">' + tag + '</span>' : '') + '<span class="chev" aria-hidden="true"></span></span>' +
+      '<span class="meta">' + chips.map(function (c) { return '<span>' + esc(c) + '</span>'; }).join('') + (mini || '') + '</span></summary>' +
+      '<div class="body">' + paras.map(function (x) { return '<p>' + esc(x) + '</p>'; }).join('') + '<div class="lnk">' + links.join('') + '</div></div></details>';
+  }
+  function connector(it) {
+    if (it.k === 'walk') {
+      if (!it.dur) return '';
+      return '<div class="leg"><span>Yürüyüş ≈ ' + it.dur + ' dk</span>' + link(dirUrl(it.from.last, it.to.first, 'walking'), 'Yol tarifi') + '</div>';
+    }
+    if (it.k === 'wait' && it.dur >= 10) return '<div class="leg"><span>' + esc(it.p.short) + ' ' + fmt(it.p.opens) + '\'da açılıyor, bekleme ≈ ' + it.dur + ' dk</span></div>';
+    return '';
+  }
+
+  function render() {
+    var S = compute(), html = '', era1 = false, era2 = false, segs = '', aria = [], i;
+    S.items.forEach(function (it) {
+      var c;
+      if (!era1 && it.k !== 'wait' && it.kind !== 'beachDirect') { html += '<p class="era">Öğleden önce · Old San Juan</p>'; era1 = true; }
+      if (it.k === 'uber') {
+        if ((it.kind === 'beach' || it.kind === 'beachDirect') && !era2) { html += '<p class="era">Öğleden sonra · Okyanus</p>'; era2 = true; }
+        c = uberCard(it); html += c.html;
+        segs += '<span class="seg tr" style="flex:' + it.dur + '"></span>'; aria.push('Uber ' + it.dur + ' dakika');
+      } else if (it.k === 'walk' || it.k === 'wait') {
+        html += connector(it);
+        if (it.dur) { segs += '<span class="seg ' + (it.k === 'wait' ? 'wait' : 'walk') + '" style="flex:' + it.dur + '"></span>'; aria.push((it.k === 'wait' ? 'bekleme ' : 'yürüyüş ') + it.dur + ' dakika'); }
+      } else if (it.k === 'stop') {
+        var p = it.p, links = p.places.map(function (pl) { return link(placeUrl(pl.a), 'Haritada aç: ' + pl.n); });
+        var opt = !POOL[POOL.indexOf(p)].on;
+        html += card('s-' + p.id, it.t0, it.t1, p.title, opt ? 'Seçenek' : '', [durStr(it.dur)].concat(p.chips), p.body, links, link(placeUrl(p.places[0].a), 'Harita', 'mp'), opt);
+        segs += '<span class="seg ' + (p.kind === 'fort' ? 'fort' : 'walk') + '" style="flex:' + it.dur + '"></span>'; aria.push(p.short + ' ' + it.dur + ' dakika');
+      } else if (it.k === 'beach') {
+        html += card('s-beach', it.t0, it.t1, 'Hobie Beach, Isla Verde', '', [durStr(it.dur), 'Su ≈ 27 °C'], [
+          'Isla Verde şehrin en geniş ve en uzun plajı. Üç bölümü var: Pine Grove, El Alambique (Hobie Beach) ve Balneario de Carolina. Hobie Beach ailelerin en çok tercih ettiği, şehre en yakın bölüm ve cankurtaran noktası olan yer. Pazartesi hafta içi olduğu için daha rahat olması beklenir.',
+          'Suya girmeden önce bayrak rengine bakın ve cankurtaranla konuşun (ayrıntılar aşağıda). Şezlong ve şemsiye kiralanabiliyor. Herkese açık tuvalet ve soyunma yeri bulmak zor olabilir. Kıyıdaki bir restoranda yemek yiyip üstünüzü orada değiştirebilirsiniz, nazikçe izin isteyin. Mayo yalnızca plajda geçerli, kalelerde ve restoranlarda normal kıyafetle dolaşın.'
+        ], [link(placeUrl(BEACH.a), 'Haritada aç: Hobie Beach')], link(placeUrl(BEACH.a), 'Harita', 'mp'));
+        segs += '<span class="seg sea" style="flex:' + it.dur + '"></span>'; aria.push('plaj ' + it.dur + ' dakika');
+      }
+    });
+    tlEl.innerHTML = html;
+    stripEl.innerHTML = segs;
+    stripEl.setAttribute('aria-label', 'Gün şeridi: ' + fmt(S.start) + ' ile ' + fmt(S.end) + ' arası. ' + aria.join(', ') + '.');
+    var total = S.end - S.start, tk = [[0, S.start]];
+    if ((S.end - S.beachStart) / total > 0.16 && (S.beachStart - S.start) / total > 0.16) tk.push([(S.beachStart - S.start) / total * 100, S.beachStart]);
+    tk.push([100, S.end]);
+    ticksEl.innerHTML = tk.map(function (x) { return '<span style="left:' + x[0].toFixed(1) + '%">' + fmt(x[1]) + '</span>'; }).join('');
+
+    /* hero */
+    document.getElementById('chipStart').textContent = fmt(S.start) + ' çıkış';
+    document.getElementById('chipEnd').textContent = fmt(S.end) + ' otelde';
+    document.getElementById('chipUber').textContent = S.ubers + ' Uber';
+    document.getElementById('factRoad').textContent = '≈ ' + durStr(S.road);
+
+    /* road list */
+    routeEl.innerHTML = S.items.filter(function (it) { return it.k === 'uber'; }).map(function (it) {
+      var from = it.kind === 'home' ? 'Isla Verde' : it.from.hotel ? 'Otel' : it.from.name === 'Casa Bacardí' ? 'Cataño' : 'Old San Juan';
+      return '<li><b>' + esc(from) + ' → ' + esc(it.to.name) + '</b><span>' + fmt(it.t0) + ' · ≈ ' + it.dur + ' dk</span>' +
+        link(dirUrl(it.from.last, it.to.first, 'driving'), 'Yol tarifi', 'maplink') + '</li>';
+    }).join('');
+
+    /* addresses */
+    var ad = [{ b: 'Otel', pl: HOTEL.a }];
+    S.sel.forEach(function (p) { ad.push({ b: p.short, pl: p.places[0].a }); });
+    if (S.sel.some(function (p) { return !p.uber; })) ad.push({ b: 'Dönüş çağrısı', pl: COLON.a });
+    ad.push({ b: 'Plaj', pl: BEACH.a });
+    addrsEl.innerHTML = ad.map(function (x) {
+      return '<div class="addr"><b>' + esc(x.b) + '</b><span>' + esc(x.pl) + '</span><div class="acts">' + link(placeUrl(x.pl), 'Haritada aç', 'maplink') + '</div></div>';
+    }).join('');
+
+    /* status */
+    var st = [];
+    st.push({ t: fmt(S.start) + ' çıkış, ' + fmt(S.end) + ' otelde. Plaj ' + fmt(S.beachStart) + '-' + fmt(S.beachEnd) + ', yolda toplam ≈ ' + durStr(S.road) + '.' });
+    S.waits.forEach(function (w) { st.push({ w: 1, t: w.p.short + ' ' + fmt(w.p.opens) + '\'da açılıyor, ' + w.gap + ' dk bekleme var. Çıkışı ' + w.gap + ' dk geciktirebilirsiniz.' }); });
+    if (!S.sel.length) st.push({ t: 'Old San Juan durağı seçilmedi, otelden doğrudan plaja gidiliyor.' });
+    if (S.sel.length && !state.on.barrachina) st.push({ t: 'Öğle yemeği seçilmedi. Plajda kıyıdaki bir restoranda yemek yiyebilirsiniz.' });
+    if (S.beachStart > 16 * 60) st.push({ w: 1, t: 'Plaja ' + fmt(S.beachStart) + '\'te varılıyor, suda kalacak vakit az. Listeden bir durak çıkarın.' });
+    else if (S.beachEnd - S.beachStart < 120) st.push({ w: 1, t: 'Plaj süresi ' + durStr(S.beachEnd - S.beachStart) + ' ile kısa kaldı. Okyanus için daha fazla vakit istiyorsanız bir durak çıkarın.' });
+    if (S.beachEnd > SUNSET + 15) st.push({ t: 'Plaj bitişi gün batımından (≈ 17:40) sonra, son yarım saatte ışık azalır.' });
+    if (S.end > 19 * 60) st.push({ w: 1, t: 'Otele dönüş ' + fmt(S.end) + '. Akşam yorgunluğu için plaj süresini kısaltmayı düşünün.' });
+    S.items.forEach(function (it) {
+      if (it.k === 'stop' && it.p.kind === 'fort' && it.t1 > 17 * 60) st.push({ w: 1, t: it.p.short + ' kapanış saati civarında bitiyor, kale saatlerini nps.gov/saju sayfasından doğrulayın.' });
+      if (it.k === 'stop' && it.p.id === 'fortaleza') st.push({ w: it.t0 > 15 * 60 + 30 ? 1 : 0, t: 'La Fortaleza turu için rezervasyon gerekir, tur saati plandaki gibi garanti değildir. Telefonla netleştirin.' + (it.t0 > 15 * 60 + 30 ? ' Plandaki saat geç, turlar genelde daha erken biter.' : '') });
+      if (it.k === 'stop' && it.p.id === 'bacardi') st.push({ t: 'Casa Bacardí için Cataño yolu ve gezi süresi plaj vaktinden düşüyor.' });
+    });
+    statusEl.innerHTML = st.map(function (x) { return '<li' + (x.w ? ' class="warn"' : '') + '>' + esc(x.t) + '</li>'; }).join('');
+
+    planEnd = S.end;
+    afterRender();
+  }
+
+  /* ---------- cards: open state, now marker ---------- */
+  function syncToggle() {
+    var anyClosed = stops.some(function (d) { return !d.open; });
+    toggleBtn.textContent = anyClosed ? 'Tümünü aç' : 'Tümünü kapat';
+  }
+  function prTime() {
+    try {
+      var parts = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Puerto_Rico', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+      var o = {};
+      parts.forEach(function (x) { o[x.type] = x.value; });
+      return { date: o.year + '-' + o.month + '-' + o.day, min: (+o.hour) * 60 + (+o.minute) };
+    } catch (e) { return null; }
+  }
+  function mark() {
+    stops.forEach(function (d) {
+      d.classList.remove('now');
+      var t = d.querySelector('.tag.now');
+      if (t) t.parentNode.removeChild(t);
+    });
+    nowStop = null; nowBtn.hidden = true;
+    var n = prTime();
+    if (!n || n.date !== TRIP || n.min >= planEnd || !stops.length) return null;
+    var idx = -1, label = 'Şimdi', i;
+    for (i = 0; i < stops.length; i++) { if (+stops[i].getAttribute('data-m') <= n.min) idx = i; }
+    if (idx < 0) { idx = 0; label = 'Sıradaki'; }
+    nowStop = stops[idx];
+    nowStop.classList.add('now');
+    var tag = document.createElement('span');
+    tag.className = 'tag now'; tag.textContent = label;
+    var chev = nowStop.querySelector('.chev');
+    chev.parentNode.insertBefore(tag, chev);
+    nowBtn.textContent = label; nowBtn.hidden = false;
+    return nowStop;
+  }
+  function afterRender() {
+    stops = Array.prototype.slice.call(tlEl.querySelectorAll('details.stop'));
+    var cur = mark();
+    stops.forEach(function (d, i) {
+      var k = d.getAttribute('data-k');
+      if (openMap[k] === undefined) d.open = phone ? (d === cur || (!cur && i === 0)) : true;
+      else d.open = openMap[k];
+    });
+    syncToggle();
+  }
+  tlEl.addEventListener('toggle', function (e) {
+    var d = e.target;
+    if (d && d.getAttribute && d.getAttribute('data-k')) { openMap[d.getAttribute('data-k')] = d.open; syncToggle(); }
+  }, true);
+  toggleBtn.addEventListener('click', function () {
+    var anyClosed = stops.some(function (d) { return !d.open; });
+    stops.forEach(function (d) { d.open = anyClosed; openMap[d.getAttribute('data-k')] = anyClosed; });
+    syncToggle();
+  });
+  nowBtn.addEventListener('click', function () {
+    if (!nowStop) return;
+    nowStop.open = true;
+    nowStop.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'center' });
+  });
+  setInterval(mark, 60000);
+
+  /* ---------- planner: events ---------- */
+  picksEl.addEventListener('change', function (e) {
+    var li = e.target.closest('.pick');
+    if (!li || e.target.type !== 'checkbox') return;
+    state.on[li.getAttribute('data-id')] = e.target.checked;
+    saveState(); syncPicks(); render();
+  });
+  picksEl.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('.step button') : null;
+    if (!b || b.disabled) return;
+    var li = b.closest('.pick'), id = li.getAttribute('data-id');
+    var p = POOL.filter(function (x) { return x.id === id; })[0];
+    var v = state.dur[id] + (+b.getAttribute('data-d'));
+    state.dur[id] = Math.max(p.min, Math.min(p.max, v));
+    saveState(); syncPicks(); render();
+  });
+  selStart.addEventListener('change', function () { state.start = +selStart.value; saveState(); render(); });
+  selBeach.addEventListener('change', function () { state.beach = +selBeach.value; saveState(); render(); });
+  document.getElementById('resetPlan').addEventListener('click', function () {
+    state = defaults();
+    try { localStorage.removeItem(PKEY); } catch (e) {}
+    openMap = {};
+    syncPicks(); render();
+  });
+
+  state = loadState();
+  buildPicks(); syncPicks(); render();
+
+  /* ---------- dock highlight ---------- */
+  if ('IntersectionObserver' in window) {
+    var links = document.querySelectorAll('.dock a[data-sec]'), byId = {};
+    Array.prototype.forEach.call(links, function (a) { byId[a.getAttribute('data-sec')] = a; });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        var a = byId[e.target.id];
+        if (!a || !e.isIntersecting) return;
+        Array.prototype.forEach.call(links, function (x) { x.removeAttribute('aria-current'); });
+        a.setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-35% 0px -55% 0px' });
+    Object.keys(byId).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+  }
+})();
+</script>
+
+</body></html>
